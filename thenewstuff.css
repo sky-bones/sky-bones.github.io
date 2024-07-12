@@ -1,0 +1,17 @@
+.gallery-grid-item:not([data-show]) .gallery-grid-item-wrapper {
+    opacity: 1 !important;
+}
+
+.gallery-grid-wrapper {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.gallery-grid-wrapper .gallery-grid-item {
+    width: calc(50% - 20px);
+    flex: calc(50% - 20px);
+}
+.gallery-grid[data-columns="3"] .gallery-grid-wrapper .gallery-grid-item {
+    width: calc(33.33% - 30px);
+    flex: calc(33.33% - 30px);
+}
