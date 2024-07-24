@@ -27,3 +27,13 @@
     width: calc(33.33% - 30px);
     flex: calc(33.33% - 30px);
 }
+
+/* extras */
+
+.footer-logo {
+    max-width: 100px;
+    width: 100%;
+}
+.align-right {
+    text-align: right;
+}
