@@ -1,3 +1,15 @@
+@import url("https://use.typekit.net/nvx0frj.css");
+
+/* fonts */
+:root {
+    --body-font-font-family: "adobe-caslon-pro", 'Times', serif;
+    --body-font-font-weight: 400;
+    --body-font-font-style: normal;
+    font-variant-ligatures: none;
+}
+
+/* gallery rebuild */
+
 .gallery-grid-item:not([data-show]) .gallery-grid-item-wrapper {
     opacity: 1 !important;
 }
