@@ -15,8 +15,7 @@ Hello. Here are some notes about the files above.
 Here are the HTML snippets for the GALLERY sections. There are three snippet options. One-column, two-column, and three-column. They are listed below.
 
 ### Two Column
-<code>
-<section
+    <section
         data-test="page-section"
         data-section-theme=""
         class="page-section gallery-section full-bleed-section background-width--full-bleed section-height--medium content-width--wide horizontal-alignment--center vertical-alignment--middle"
@@ -97,10 +96,8 @@ Here are the HTML snippets for the GALLERY sections. There are three snippet opt
             </div>
         </div>
     </section>
-</code>
 
 ### One Column
-<code>
     <section
         data-test="page-section"
         data-section-theme=""
@@ -161,10 +158,8 @@ Here are the HTML snippets for the GALLERY sections. There are three snippet opt
             </div>
         </div>
     </section>
-</code>
 
 ### Three Column
-<code>
     <section
         data-test="page-section"
         data-section-theme=""
@@ -267,4 +262,3 @@ Here are the HTML snippets for the GALLERY sections. There are three snippet opt
             </div>
         </div>
     </section>
-</code>
