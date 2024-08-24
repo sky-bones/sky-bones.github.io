@@ -17,16 +17,25 @@
 .gallery-grid-wrapper {
     display: flex !important;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 50px;
 }
+.gallery-grid[data-width="full"] {
+    padding: 50px 3vw 0 3vw;
+}
+
 .gallery-grid-wrapper .gallery-grid-item {
-    width: calc(50% - 20px);
-    flex: calc(50% - 20px);
+    width: calc(50% - 25px);
+    flex: calc(50% - 25px);
+}
+.gallery-grid[data-columns="1"] .gallery-grid-wrapper .gallery-grid-item {
+    width: 100%;
+    flex: 100%;
 }
 .gallery-grid[data-columns="3"] .gallery-grid-wrapper .gallery-grid-item {
-    width: calc(33.33% - 30px);
-    flex: calc(33.33% - 30px);
+    width: calc(33.33% - 35px);
+    flex: calc(33.33% - 35px);
 }
+
 
 @media (max-width: 767px) {
     .gallery-grid[data-width="full"] {
@@ -34,7 +43,7 @@
     }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 620px) {
     .gallery-grid-wrapper .gallery-grid-item,
     .gallery-grid[data-columns="3"] .gallery-grid-wrapper .gallery-grid-item {
         width: 100%;
@@ -42,15 +51,80 @@
     }
 }
 
-/* extras */
+/* mobile menu hiding */
 
 .header-burger {
     display: none; /*no mobile menu needed*/
 }
+.header-burger .top-bun,
+.header-burger .patty,
+.header-burger .bottom-bun {
+    height: 1px;
+}
 
-.footer-section.page-section:not(.full-bleed-section) > .content-wrapper {
+/* header logo */
+
+.header-title-logo img {
+    max-height: 70px;
+}
+@media (max-width: 1024px) {
+    .header-title-logo img {
+        max-height: 50px;
+    }
+}
+
+/* header section */
+
+.header-section.page-section {
+    padding-top: 110px !important;
+}
+
+@media (max-width: 1024px) and (max-width: 799px) {
+    .header-display-desktop {
+        display: block !important;
+    }
+}
+
+.header .header-announcement-bar-wrapper {
+    padding: 30px 3vw 30px 3vw;
+}
+
+/* content sections and their padding */
+
+.page-section.section-height--medium:not(.content-collection):not(.gallery-section):not(.user-items-list-section) {
+    min-height: auto;
+}
+.page-section.vertical-alignment--middle:not(.content-collection):not(.gallery-section):not(.user-items-list-section):not(.editmode-changing-rowcount).section-height--medium > .content-wrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+@media (max-width: 767px) {
+    .page-section.vertical-alignment--middle:not(.content-collection):not(.gallery-section):not(.user-items-list-section):not(.editmode-changing-rowcount).section-height--medium > .content-wrapper {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+}
+
+.page-section:not(.full-bleed-section) > .content-wrapper {
+    padding-left: 3vw;
+    padding-right: 3vw;
+    margin: 0 0;
+}
+
+[class*="sqs-col"] .sqs-block {
     padding-left: 0;
     padding-right: 0;
+}
+.sqs-layout > .sqs-row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* footer section */
+
+.footer-section.page-section > .content-wrapper {
+    padding-left: 3vw;
+    padding-right: 3vw;
 }
 .footer-section.page-section:not(.full-bleed-section) .sqs-layout > .sqs-row {
     margin-left: 0;
@@ -71,6 +145,15 @@
     max-width: 150px;
     width: 100%;
 }
+
+/* misc */
+
 .align-right {
     text-align: right;
+}
+
+@media (min-width: 2160px) {
+    p.sqsrte-large {
+        padding-top: 10px; /* fixes a render issue */
+    }
 }
